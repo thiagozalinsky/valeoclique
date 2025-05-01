@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// tailwind.config.js
+>>>>>>> aeab07bd35e4b14286d89cf261d8088c83809a9c
 module.exports = {
   theme: {
     extend: {
