@@ -1,11 +1,8 @@
 export default function Header() {
-    return (
-      <header className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-orange-600">Vale o Clique</h1>
-        <p className="text-sm text-muted-foreground">
-          Achados do Mercado Livre com reviews reais e links de afiliado!
-        </p>
-      </header>
-    );
-  }
-  
+  return (
+    <header className="bg-yellow-400 text-blue-800 p-4 rounded-t-lg">
+      <h1 className="text-xl font-bold">📦 Vale o Clique – Blog do Mercado Livre</h1>
+      <p className="text-sm">Achados, promoções e reviews com nossos links afiliados!</p>
+    </header>
+  );
+}

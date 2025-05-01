@@ -1,10 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-/* Estilos adicionais aqui se quiser */
-body {
-  background-color: #f9fafb;
-  font-family: 'Inter', sans-serif;
-}
