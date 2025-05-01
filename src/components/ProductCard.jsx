@@ -1,37 +1,40 @@
-export default function ProdutoCard() {
+export default function ProdutoCard({ titulo, descricao, produto }) {
   return (
-    <div className="max-w-md mx-auto bg-mercadolivre-gray p-6 rounded-2xl shadow-md mt-6">
-      <h1 className="text-2xl font-bold text-mercadolivre-blue mb-2">
-        Recomendação de Produto
-      </h1>
-      <p className="text-mercadolivre-text mb-4">
-        Veja os produtos mais bem avaliados com entrega rápida no Mercado Livre!
-      </p>
+    <div className="bg-white p-4 rounded shadow">
+      <h3 className="text-lg font-bold text-blue-900">{titulo}</h3>
+      <p className="text-gray-700 mb-2">{descricao}</p>
 
-      <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
-        <img
-          src="https://http2.mlstatic.com/D_Q_NP_2X_837006-MLU72948151567_112023-F.webp"
-          alt="Smartwatch XYZ"
-          className="w-24 h-24 object-contain rounded-md"
-        />
-
-        <div>
-          <h2 className="text-lg font-semibold text-mercadolivre-text">
-            Smartwatch XYZ
-          </h2>
-          <p className="text-sm text-mercadolivre-text">
-            <strong>Descrição:</strong> Modelo resistente à água, com monitoramento cardíaco.<br />
-            <strong>Prós:</strong> Ótimo custo-benefício, entrega rápida.<br />
-            <strong>Contras:</strong> Carregador frágil segundo alguns usuários.
-          </p>
-          <a
-            href="#"
-            className="inline-block mt-2 bg-mercadolivre-yellow text-mercadolivre-text font-bold py-1 px-3 rounded hover:opacity-90 transition"
-          >
-            Ver no Mercado Livre
-          </a>
+      {produto && (
+        <div className="flex items-start space-x-4 mt-2">
+          <img src={produto.imagem} alt={produto.nome} className="w-24 h-24 object-cover rounded" />
+          <div>
+            <h4 className="font-semibold text-blue-900">{produto.nome}</h4>
+            <p className="text-sm text-gray-700">{produto.descricao}</p>
+            <p className="text-green-700"><strong>Prós:</strong> {produto.pros}</p>
+            <p className="text-red-600"><strong>Contras:</strong> {produto.contras}</p>
+          </div>
         </div>
-      </div>
+      )}
+    </div>
+  );
+}
+export default function ProdutoCard({ titulo, descricao, produto }) {
+  return (
+    <div className="bg-white p-4 rounded shadow">
+      <h3 className="text-lg font-bold text-blue-900">{titulo}</h3>
+      <p className="text-gray-700 mb-2">{descricao}</p>
+
+      {produto && (
+        <div className="flex items-start space-x-4 mt-2">
+          <img src={produto.imagem} alt={produto.nome} className="w-24 h-24 object-cover rounded" />
+          <div>
+            <h4 className="font-semibold text-blue-900">{produto.nome}</h4>
+            <p className="text-sm text-gray-700">{produto.descricao}</p>
+            <p className="text-green-700"><strong>Prós:</strong> {produto.pros}</p>
+            <p className="text-red-600"><strong>Contras:</strong> {produto.contras}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
